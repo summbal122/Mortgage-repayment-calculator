@@ -1,0 +1,299 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+}
+:root{
+  --Lime-color: hsl(61, 70%, 52%);
+  --Red-color: hsl(4, 69%, 50%);
+  --White: hsl(0, 0%, 100%);
+  --Slate-100: hsl(202, 86%, 94%);
+  --Slate-300: hsl(203, 41%, 72%);
+  --Slate-500: hsl(200, 26%, 54%);
+  --Slate-700: hsl(200, 24%, 40%);
+  --Slate-900: hsl(202, 55%, 16%);
+  --Lime-color-light: hsl(62, 73%, 90%);
+}
+body{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--Slate-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main{
+  width: 60%;
+}
+button{
+  background-color: var(--Lime-color);
+  color: var(--Slate-900);
+  font-size: 1.3rem;
+  padding: 1rem 2rem;
+  width: 70%;
+  border: none;
+  border-radius: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  &:hover{
+    cursor: pointer;
+  }
+}
+button img{
+  width:8%;
+}
+img{
+  width: 13rem;
+}
+p{
+  color: var(--Slate-700);
+}
+input:hover{
+  cursor: pointer;
+}
+h2{
+  font-size: 1.8rem;
+}
+.main-section{
+  background-color: var(--White);
+  border-radius: 2rem;
+  overflow: hidden;
+  gap: 1rem;
+  display: flex;
+}
+.left-section{
+  padding: 2.5rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.heading p{
+  font-size: 1.2rem;
+  &:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.right-section{
+  background-color: var(--Slate-900);
+  color: var(--White);
+  padding: 3rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  border-bottom-left-radius: 5rem;
+}
+.amount-section{
+  display: flex;
+  gap: 1rem;
+}
+.radio-section{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.radio-option{
+  display: flex;
+  gap: 1rem;
+  border: 1px solid black;
+  padding: 1rem;
+  color: var(--Slate-900);
+  font-weight: 700;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Slate-500);
+} 
+.form-group{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.amount-section .input-container{
+  flex-direction: row-reverse;
+}
+.input-container > input {
+  border: none;
+  padding: 0.7em;
+  border-radius: 0.5rem;
+  width: 100%;
+  color: var(--Slate-900);
+  
+  outline: none;
+  letter-spacing: .09rem;
+}
+.input-container {
+  border-radius: 0.25em;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 0.8em;
+  width: 100%;
+  border: 1px solid var(--Slate-500);
+  &:hover{
+    border: 1px solid var(--Lime-color);
+  }
+}
+.placeholder {
+  padding: 1.2rem 1rem;
+  font-weight: 700;
+  color: var(--Slate-700);
+  background-color: var(--Slate-100);
+}
+.result-para{
+  color: var(--Slate-300);
+  font-size: 1.2rem;
+}
+.radio-option:hover{
+  border: 1px solid var(--Lime-color);
+  cursor: pointer;
+}
+.radio-option input[type="radio"]:checked {
+  background-color: var(--Lime-color);
+  color: var(--White);
+  border: 1px solid var(--Lime-color);
+}
+.result-section{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: start;
+}
+.monthly-repayments{
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--Lime-color);
+}
+.result-div{
+  background-color: rgb(32, 33, 40);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: .5rem;
+  text-align: start;
+  box-shadow:  var(--Lime-color) 0px 3px 0px inset;
+}
+.result-para{
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+
+}
+.repay-para{
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--White);
+}
+.div-p{
+color: var(--Slate-500);
+margin-bottom: 1rem;
+}
+.input-container:focus-within {
+  border-color: var(--Lime-color);
+}
+.input-container:focus-within span {
+  color: var(--Slate-900);
+  background-color: var(--Lime-color);
+}
+.radio-option:has(input[type="radio"]:checked) {
+  background-color: var(--Lime-color-light);
+  border-color: var(--Lime-color);
+}
+input[type="radio"]{
+  accent-color: var(--Lime-color);
+  
+}
+/* Default styles for tablets (768px and below) */
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    padding: 1rem;
+  }
+  main {
+    width: 60%;
+  }
+  .main-section {
+    flex-direction: column; /* Stack the sections vertically */
+    gap: 1rem;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%; /* Make sections full-width */
+    padding: 2rem;
+  }
+
+  .right-section {
+    text-align: center;
+    border-bottom-left-radius: 2rem;
+  }
+
+  button {
+    width: 100%; /* Full-width button for easier access */
+  }
+}
+
+/* Mobile screens (480px and below) */
+@media (max-width: 480px) {
+  main {
+    width: 90%;
+  }
+  h1 {
+    font-size: 1.5rem; 
+    text-align: center;
+  }
+  .heading p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  form {
+    gap: 1rem; 
+  }
+  .radio-section {
+    flex-direction: col;
+  }
+
+  .right-section img {
+    width: 10rem; 
+  }
+  .result-para {
+    font-size: 1rem; 
+    line-height: 1.5rem;
+  }
+  .result-div {
+    padding: 1rem; 
+  }
+
+  .monthly-repayments {
+    font-size: 2rem; 
+  }
+  .repay-para {
+    font-size: 1rem;
+  }
+}
+.error-msg{
+  color: red;
+  word-spacing: .2rem;
+  font-weight: 700;
+}
+
